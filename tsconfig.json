@@ -2,7 +2,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": false,
     "baseUrl": "./",
+    // "baseUrl": "./src",
+    "paths": {
+      "shared/*": [
+        "src/app/shared/*"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -21,6 +29,9 @@
     "lib": [
       "es2020",
       "dom"
+    ],
+    "plugins": [
+      { "name": "typescript-tslint-plugin" }
     ]
   },
   "angularCompilerOptions": {
